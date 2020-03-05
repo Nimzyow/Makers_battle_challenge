@@ -9,22 +9,22 @@ class Game
   end
 
   def turn
-    @turn ? attack(@player_1) : attack(@player_2)
+    @turn ? attack(@player_2) : attack(@player_1)
   end
 
   private
 
   def attack(player)
     player.reduce_hp
-    switch_turn
+    switch_current_player
   end
 
   def switch_turn
     @turn = !@turn
-    switch_current_player
   end
 
   def switch_current_player
     @turn ? @current_player = @player_2 : @current_player = @player_1
+    switch_turn
   end
 end
