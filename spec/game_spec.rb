@@ -14,6 +14,10 @@ describe Game do
       expect(subject).to have_attributes(player_2: player_2 )
     end
 
+    it "current_player" do
+      expect(subject).to have_attributes(current_player: player_1 )
+    end
+
     it "turn" do
       expect(subject.instance_variable_get(:@turn)).to eql(true)
     end

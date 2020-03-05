@@ -27,6 +27,7 @@ class Battle < Sinatra::Base
     @player_2_name = $game.player_2.name
     @player_1_hp = $game.player_1.hp
     @player_2_hp = $game.player_2.hp
+    @current_player = $game.current_player.name
     erb(:attack)
   end
 
