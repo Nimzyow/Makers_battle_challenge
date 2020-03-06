@@ -1,7 +1,7 @@
 <div style="display: flex; flex-direction: column">
   <h2 style="font-family: fantasy"><%= @player_1_name %> vs. <%= @player_2_name %></h2>
   <h2 style="font-family: fantasy"><%= @player_2_name %> HP is <%= @player_2_hp%></h2>
-  <form action="/attack">
+  <form action="/attack" post="post">
     <input type="submit" value="Attack!" >
   </form>
 </div>
