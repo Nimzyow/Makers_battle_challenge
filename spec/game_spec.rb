@@ -29,6 +29,8 @@ describe Game do
   end
   context "method functionality" do
     it "#turn delegates to attack" do
+      allow(player_1).to receive(:hp).and_return(100)
+      allow(player_2).to receive(:hp).and_return(100)
       expect(subject).to receive(:attack).once
       subject.turn
     end

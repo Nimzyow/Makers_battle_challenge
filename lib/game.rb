@@ -19,12 +19,6 @@ class Game
     end
   end
 
-  # def game_over_check
-  #   if @player_1.hp == 0 || @player_2.hp == 0
-  #     @game_over = @game_over = true
-  #   end
-  # end
-
   def self.create(player_1, player_2)
     @game = Game.new(player_1, player_2)
   end
